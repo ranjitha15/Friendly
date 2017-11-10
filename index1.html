@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- REACT LIBRARY -->
+  <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+  <!-- REACT DOM LIBRARY -->
+  <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+  <!-- BABEL LIBRARY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>FriendLy</title>
+</head>
+<body>
+  <div id="app">React has not rendered yet</div>
+
+  <script type="text/babel">
+    // FriendLy Complex Component
+    function FriendLy(props) {
+      var friendlyStyle = {
+        display: 'inline-block',
+        margin: 20,
+        height: 300,
+        width: 200,
+        padding: 0,
+        backgroundColor: "#FFF",
+        WebkitFilter: "drop-shadow(0px 0px 5px #555)",
+        filter: "drop-shadow(0px 0px 5px #555)"
+      }
+      return(
+        <div style={friendlyStyle}>
+          <Avatar img={props.img}/>
+          <UserName name={props.name}/>
+          <GetConnected/>
+        </div>
+      );
+    }
+    // Avatar Component
+    function Avatar(props) {
+      var avatarStyle = {
+        marginLeft: 27,
+        marginTop: 20,
+        width: 150,
+        height: 150,
+        borderRadius: "50%"
+      }
+      return(
+        <img src={props.img} alt="profile pic" style={avatarStyle}/>
+      );
+    }
+    // UserName Component
+    function UserName(props) {
+      var nameStyle = {
+        fontSize: 24,
+        textAlign: "center",
+        fontFamily: "Arial, Helvetica, sans-serif",
+        margin: 20
+      }
+      return(
+        <h1 style={nameStyle}>{props.name}</h1>
+      );
+    }
+    // GetConnected Complex Component
+    function GetConnected() {
+      var getConnectedStyle = {
+        marginLeft: 15
+      }
+      return(
+        <div style={getConnectedStyle}>
+          <Like/>
+          <Share/>
+          <Add/>
+        </div>
+      );
+    }
+      var iconStyle = {
+        margin: 20
+      }
+      // Like Component
+      function Like() {
+        return(
+          <i className="fa fa-thumbs-o-up" aria-hidden="true" style={iconStyle}></i>
+        );
+      }
+      // Share Component
+      function Share() {
+        return(
+          <i className="fa fa-share" aria-hidden="true" style={iconStyle}></i>
+        );
+      }
+      // Add Component
+      function Add() {
+        return(
+          <i className="fa fa-users" aria-hidden="true" style={iconStyle}></i>
+        );
+      }
+
+
+
+    ReactDOM.render(
+      <div>
+      
+      <FriendLy name = "Ranjitha" img = "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/20992561_164010490823451_5847241417292159039_n.jpg?oh=8073402f662ad1beb28e231500309ae2&oe=5A623DD4"/>
+      <FriendLy name = "Sivakami" img = "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/20881844_678474892346728_4259970533998482854_n.jpg?oh=274e9945fe81fa347022ab9d626ea598&oe=5AA4C579"/>
+      <FriendLy name = "Subbulakshmi" img = "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/22228131_695316690662548_709999713387605496_n.jpg?oh=50586f7242e26bef856a2f4ab01c6fb7&oe=5A9A67BE"/>
+      <FriendLy name = "Oviya" img = "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/22448206_1467628086640229_5132715209980525429_n.jpg?oh=879cb5119c126c059346b64ea03438ab&oe=5A9BCE43"/>
+      <FriendLy name = "Harish" img = "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/14720567_674638646036624_3599843535679072796_n.jpg?oh=ab10d44660d51a126b7bdf8d4d779454&oe=5A6ECDFD"/>
+      <FriendLy name = "Bindu" img = "https://scontent-frx5-1.xx.fbcdn.net/v/t31.0-8/13724131_536446589895807_3146930152012115829_o.jpg?oh=092bebb1208347105963415c4346a2bc&oe=5A63D888"/>
+      <FriendLy name = "Aarav" img = "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/22528356_1588611911182545_1887629652259276505_n.jpg?oh=685fb14d1f41244996780b833d04f552&oe=5A6FB266"/>
+      <FriendLy name = "Ganesh" img = "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/12631427_1050680064984652_8261100619147738785_n.jpg?oh=1cb8e670d811d2ab7939be4401226ec8&oe=5AA90617"/>
+      <FriendLy name = "Nisha" img = "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/12410566_1039259892793336_4992196674719876698_n.jpg?oh=dd6004358a2c0b8a63a85c62f8ceed60&oe=5A6DB345"/>
+      <FriendLy name = "Sakthi" img = "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/20915353_1820859061559652_5094514384701321880_n.jpg?oh=677ce7c0f801b84c1317f4acbf406703&oe=5A6540C3"/>
+      <FriendLy name = "Gayathri" img = "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/18767542_924154554392948_4383248788619580261_n.jpg?oh=9604422fda2f1c9070776a6430bf59cf&oe=5A69F76F"/>
+      <FriendLy name = "Juliana" img = "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/22281728_103428167082400_9156240419030053865_n.jpg?oh=7d4ffa27d626410a3ca7aa6d6cf9f974&oe=5A63315F"/>
+      <FriendLy name = "Suja" img = "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/22195693_1931697940204239_4364292603856556381_n.jpg?oh=69541c41c0624c2df7318d4997cd08b8&oe=5AAB4E3C"/>
+      <FriendLy name = "Raiza" img = "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/21432760_1983879618491064_3655700374546781124_n.jpg?oh=cf20d0082b0b514ecf12d4732d279317&oe=5AAEECBA"/>
+      </div>,
+
+
+      document.getElementById("app")
+    );
+
+
+  </script>
+
+</body>
+</html>
